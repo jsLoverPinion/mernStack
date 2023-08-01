@@ -15,8 +15,8 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   avartar: {
-    type: Data,
-    dafault: Data.now,
+    type: Date,
+    dafault: Date.now,
   },
 });
 
