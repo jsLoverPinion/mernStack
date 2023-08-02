@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://PINION:pmcpmc0505@cluster0.bklpwye.mongodb.net/?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://PINION:pmcpmc0505@cluster0.bklpwye.mongodb.net/?retryWrites=true&w=majority",
+  "jswtSecret": "myjsonsecrettoken"
 }
