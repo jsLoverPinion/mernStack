@@ -1,3 +1,4 @@
+//https://youtu.be/Z09xbCo2eU4?list=PLRtgL54fRxE1ngSuElZIzsuX8Lntihgfo&t=697
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
@@ -15,6 +16,7 @@ router.post(
       min: 8,
     }),
   ],
+  //
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -38,15 +40,16 @@ router.post(
         });
       }
       //*유저가 아바타 (프로필 사진)
-      const avaatar = gravatar.url(email, {
+      const avatar = gravatar.url(email, {
         s: "200",
         r: "pg",
         d: "mm",
       });
+      console.log("Generated avatar URL:", avatar);
       user = new User({
         name,
         email,
-        avaatar,
+        avatar,
         password,
       });
       //*비밀번호 encrypt
@@ -63,5 +66,3 @@ router.post(
   }
 );
 module.exports = router;
-
-///https://youtu.be/Z09xbCo2eU4?list=PLRtgL54fRxE1ngSuElZIzsuX8Lntihgfo&t=655

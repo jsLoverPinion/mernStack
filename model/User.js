@@ -14,9 +14,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  avartar: {
-    type: Date,
-    dafault: Date.now,
+  avatar: {
+    type: String,
+    dafault: "https://www.gravatar.com/avatar/?d=mp",
   },
 });
 
