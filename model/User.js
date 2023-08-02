@@ -18,6 +18,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     dafault: "https://www.gravatar.com/avatar/?d=mp",
   },
+  date: {
+    type: Date,
+  },
 });
 
 module.exports = User = mongoose.model("user", UserSchema);
